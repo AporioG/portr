@@ -1,5 +1,5 @@
 [package]
-name = "portr"
+name = "portr-tui"
 version = "0.1.0"
 edition = "2021"
 authors = ["gamer"]
@@ -9,6 +9,10 @@ repository = "https://github.com/AporioG/portr"
 readme = "README.md"
 keywords = ["tui", "network", "socket", "process", "audit"]
 categories = ["command-line-utilities", "network-programming"]
+
+[[bin]]
+name = "portr"
+path = "src/main.rs"
 
 [dependencies]
 crossterm = "0.28"
