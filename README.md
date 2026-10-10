@@ -22,12 +22,13 @@ Zero runtime dependencies. Direct `/proc` kernel introspection. Fully static PIE
 
 ## Installation
 
-### Arch Linux (AUR)
+### Via Cargo (crates.io)
 
 ```bash
-yay -S portr-bin
+cargo install portr-tui
+sudo setcap cap_sys_ptrace,cap_dac_read_search+ep $(which portr || echo ~/.cargo/bin/portr)
+portr
 ```
-
 ### Static Binary (Any Linux x86_64)
 
 ```bash
@@ -37,10 +38,16 @@ sudo setcap cap_sys_ptrace,cap_dac_read_search+ep /usr/local/bin/portr
 portr
 ```
 
+### Arch Linux (Local build)
+
+```bash
+git clone https://github.com/AporioG/portr.git /tmp/portr && cd /tmp/portr/portr-bin && makepkg -si --noconfirm
+```
+
 ### From Source
 
 ```bash
-git clone https://github.com/AporioG/portr.git
+git clone [https://github.com/AporioG/portr.git](https://github.com/AporioG/portr.git)
 cd portr
 cargo build --release
 sudo setcap cap_sys_ptrace,cap_dac_read_search+ep target/release/portr
