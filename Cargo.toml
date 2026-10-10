@@ -3,7 +3,12 @@ name = "portr"
 version = "0.1.0"
 edition = "2021"
 authors = ["gamer"]
-description = "High-performance zero-overhead TUI network socket & process auditor for Linux"
+description = "A zero-overhead, interactive TUI network socket & process auditor for Linux"
+license = "MIT"
+repository = "https://github.com/AporioG/portr"
+readme = "README.md"
+keywords = ["tui", "network", "socket", "process", "audit"]
+categories = ["command-line-utilities", "network-programming"]
 
 [dependencies]
 crossterm = "0.28"
